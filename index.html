@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<title>Population Biology Flashcards</title>
+<title>Ecology Flashcards</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap">
 </head>
 <body>
@@ -750,17 +750,17 @@ kbd {
 <div class="hdr">
   <div class="hdr-top">
     <div class="hdr-chips">
-      <span class="chip">Ch. 6, 7 &amp; 8</span>
-      <span class="chip">Exam 2</span>
-      <span class="chip">Population Biology</span>
+      <span class="chip">Oct 16–23</span>
+      <span class="chip">Test Nov 4</span>
+      <span class="chip">Food · Energy · Coal · Oil · Soil</span>
     </div>
     <div class="hdr-btns">
       <button class="fs-btn" onclick="toggleFullscreen()" id="fs-btn" title="Open full screen">⛶</button>
       <button class="theme-btn" onclick="toggleTheme()" id="theme-btn" title="Toggle theme">🌙</button>
     </div>
   </div>
-  <h1>Population Biology Flashcards</h1>
-  <p class="hdr-sub" id="main-sub">125 cards · Tap to flip · Space to flip · ← → to mark</p>
+  <h1>Ecology Flashcards</h1>
+  <p class="hdr-sub" id="main-sub">75 cards · Tap to flip · Space to flip · ← → to mark</p>
 </div>
 
 <div class="mode-tabs">
@@ -787,7 +787,7 @@ kbd {
         <!-- FRONT -->
         <div class="card-face card-front">
           <div class="card-meta">
-            <span class="topic-badge" id="topic-badge-front">Ch. 6</span>
+            <span class="topic-badge" id="topic-badge-front">Soil & Farming</span>
             <span class="exam-badge" id="exam-badge-front" hidden>📋 TEST</span>
             <span class="card-num" id="card-num-front">1 / 84</span>
           </div>
@@ -798,7 +798,7 @@ kbd {
         <!-- BACK -->
         <div class="card-face card-back">
           <div class="card-meta">
-            <span class="topic-badge" id="topic-badge-back">Ch. 6</span>
+            <span class="topic-badge" id="topic-badge-back">Soil & Farming</span>
             <span class="exam-badge" id="exam-badge-back" hidden>📋 TEST</span>
             <span class="card-num" id="card-num-back">1 / 84</span>
           </div>
@@ -843,7 +843,7 @@ kbd {
       <div class="q-count-row">
         <button class="q-count-btn selected" onclick="selectCount(10,this)">10</button>
         <button class="q-count-btn"          onclick="selectCount(20,this)">20</button>
-        <button class="q-count-btn"          onclick="selectCount(128,this)">All 128</button>
+        <button class="q-count-btn"          onclick="selectCount(75,this)">All 75</button>
       </div>
     </div>
     <button class="btn btn-primary" style="width:100%;padding:16px;font-size:16px;border-radius:14px;" onclick="startTest()">Start Test →</button>
@@ -880,284 +880,171 @@ kbd {
 //  CARDS
 // ═══════════════════════════════════════════════════════════
 const ALL_CARDS = [
-  // ── Ch. 8: Environmental Health & Toxicology (0–41) ──
-  ["What are the three types of biodiversity, and what happens when each is lost?",
-   "<strong>1. Genetic diversity</strong> — variety of genes within a species. Loss → reduced adaptability; population vulnerable to disease and environmental change. <strong>2. Species diversity</strong> — variety of different species in an area. Loss → ecosystem instability; loss of ecological roles (pollination, decomposition, etc.). <strong>3. Ecosystem diversity</strong> — variety of habitats, communities, and ecological processes across a region. Loss → collapse of services like clean water, climate regulation, and nutrient cycling.", true],
-  ["What does the IPAT formula stand for, and what does each letter mean?",
-   "<strong>I = P × A × T</strong>. <strong>I</strong> = Environmental Impact. <strong>P</strong> = Population size. <strong>A</strong> = Affluence (consumption per person — the more you consume, the greater your impact). <strong>T</strong> = Technology (the efficiency or damage of the technologies used to produce goods and services). The formula shows that environmental impact is driven by how many people exist, how much each consumes, and how damaging their tools are.", true],
-  ["What are the three types of survivorship curves, and what does each represent?",
-   "<strong>Type I (Late loss)</strong>: Most individuals survive to old age; mortality spikes late in life. Typical of large mammals with few offspring and high parental care (e.g., humans, elephants). <strong>Type II (Constant loss)</strong>: Mortality rate is constant at all ages. Typical of birds and some reptiles. <strong>Type III (Early loss)</strong>: Very high mortality early in life; the few survivors live long. Typical of species with many offspring and no parental care (e.g., sea turtles, oysters, most fish and insects).", true],
-  ["What are the advantages and disadvantages of water-soluble substances?",
-   "<strong>Disadvantages:</strong> moves through the environment <strong>rapidly and widely</strong>; has easy access to our cells (we are mostly water). <strong>Advantage:</strong> excreted quickly — the body does not hold on to it (e.g., Vitamin C — whatever the body can't use is urinated out).", true],
-  ["What are the advantages and disadvantages of fat-soluble substances?",
-   "<strong>Advantage:</strong> does not move quickly or widely through the environment — needs help moving. <strong>Disadvantages:</strong> cell membranes are made of phospholipids → easy access to cells and tissues; tends to <strong>accumulate and be stored in fat (adipose) tissue for years</strong>. Fat-soluble vitamins (D, A, K) must be taken carefully for this reason.", true],
-  ["What are the 3 routes of entry for toxic substances into the body?",
-   "1. <strong>Airborne</strong> — breathing them in. 2. <strong>Ingestion</strong> — consuming through food and water. 3. <strong>Absorption</strong> — absorbed through the skin.", true],
-  ["Where does our greatest exposure to toxicants come from?",
-   "<strong>Industrial and agricultural settings.</strong> Farm workers are exposed to pesticides, herbicides, and fertilizers. Industries tend to be located where land is cheap — often near lower socioeconomic populations, meaning these groups are disproportionately impacted."],
-  ["Why are children more sensitive to toxic substances than adults?",
-   "Children are <strong>still developing</strong> — organs and body systems have not fully matured, making them more vulnerable to damage. They also have smaller lung volumes for airborne toxicants. <strong>Adults with pre-existing conditions</strong> (COPD, asthma, low immune system) are also at higher risk than healthy adults."],
-  ["What is thalidomide, and why is it a classic example of the importance of timing of exposure?",
-   "Thalidomide was an OTC drug sold in the <strong>1950s</strong> for anxiety, insomnia, and morning sickness. If taken during the <strong>3rd week of gestation</strong> — when most women don't yet know they're pregnant — it causes <strong>severe limb abnormalities</strong> (babies born without arms, legs, or hands). It shows that WHEN a teratogen is taken can be just as critical as the substance itself.", true],
-  ["What is biomagnification? How does it differ from bioaccumulation?",
-   "<strong>Bioaccumulation</strong> = buildup of a toxic substance within a single organism. <strong>Biomagnification</strong> = <strong>elevated concentrations of harmful substances in the cells/tissues of organisms at higher trophic levels</strong> as you move up the food chain. Example: DDT in soil → plant → herbivore → carnivore, accumulating more at each step. DDT caused eagles and peregrine falcons to lay eggs with brittle shells → eggs didn't survive gestation.", true],
-  ["What is persistence of a toxic substance?",
-   "How long a <strong>toxic substance remains in the environment</strong> after being released. Some substances, like <strong>lead and mercury</strong> (heavy metals), are extremely persistent and can last for <strong>years or even centuries</strong>.", true],
-  ["What are the 4 human causes of antibiotic resistance?",
-   "1. <strong>Overuse in livestock</strong> — added to feed to increase weight gain. 2. <strong>Overprescribing</strong> — ~50% of antibiotic prescriptions each year are inappropriate. 3. <strong>Noncompliance</strong> — not taking antibiotics at consistent intervals or not finishing the full course. 4. <strong>Lax regulations</strong> in other countries — antibiotics available over the counter without a prescription."],
-  ["Why don't antibiotics work against viral infections?",
-   "Viruses <strong>lack the biological targets</strong> that antibiotics need to destroy bacteria. Prescribing an antibiotic for a viral infection does not treat the illness — it only increases the risk of resistance developing."],
-  ["Antibiotic resistance is one of the WHO's top __ health concerns right now.",
-   "Top <strong>5</strong>. We are losing the ability to treat infections that were easily treatable 10–20 years ago because of bacterial evolution and resistance."],
-  ["What is toxicology?",
-   "The study of <strong>toxic (poisonous) substances</strong> and their effects on living organisms."],
-  ["What is the difference between a toxic substance and a hazardous substance?",
-   "<strong>All toxic substances are hazardous, but not all hazardous substances are toxic.</strong> Toxic = poisonous. Hazardous = dangerous (could be flammable, explosive, very acidic/alkaline, or an irritant) — but not necessarily a poison."],
-  ["What is environmental toxicology?",
-   "The study of the effects of <strong>toxic substances on living organisms</strong>, and how those substances <strong>interact and transform</strong> as they move through ecosystems, food chains, and food webs."],
-  ["What are the EPA's top 5 most toxic/hazardous substances?",
-   "1. <strong>Arsenic</strong> — treated lumber (railroad ties, pressure-treated wood). 2. <strong>Lead</strong> — old paint; removed from gasoline in the 1970s. 3. <strong>Mercury</strong> — coal combustion/burning fossil fuels. 4. <strong>Vinyl chloride</strong> — plastics and industrial uses. 5. <strong>PCBs</strong> (Polychlorinated Biphenyls) — appliances and electrical insulation."],
-  ["What are the 6 ways toxic substances can impact living organisms?",
-   "1. <strong>Allergens</strong> 2. <strong>Endocrine disruptors</strong> 3. <strong>Neurotoxins</strong> 4. <strong>Mutagens</strong> 5. <strong>Teratogens</strong> 6. <strong>Carcinogens</strong>", true],
-  ["What are endocrine disruptors, and what are their effects?",
-   "Substances that <strong>disrupt hormone function</strong>. Effects: reduced fertility in women; feminization of males (e.g., breast development); linked to certain cancers.", true],
-  ["What are neurotoxins? Give 2 examples.",
-   "Extremely toxic, fast-acting poisons that <strong>attack nerve cells</strong> (brain, spinal cord, peripheral nerves). Examples: <strong>mercury</strong> and <strong>lead</strong>.", true],
-  ["What are mutagens? What is the key rule about exposure?",
-   "Substances that <strong>damage or alter the genetic material</strong> of cells. Key rule: <strong>there is no safe threshold</strong> — any exposure has the possibility of causing damage. They can lead to birth defects and tumor growth.", true],
-  ["What are teratogens? What is the most prevalent example?",
-   "Chemicals that cause <strong>abnormalities in embryonic development</strong>. They would otherwise not be harmful at non-sensitive developmental stages. Most prevalent teratogen: <strong>alcohol</strong> → causes fetal alcohol syndrome.", true],
-  ["What are carcinogens? Give an example.",
-   "Toxic substances that <strong>cause cancer</strong>. Example: tobacco (cigarettes, vaping — any inhalant damages delicate lung tissue).", true],
-  ["What is solubility? What are the two types?",
-   "The ability of a substance to <strong>dissolve in another substance</strong>. Two types: <strong>water soluble</strong> (dissolves in water) and <strong>fat soluble</strong> (dissolves in fat/lipids).", true],
-  ["How does the World Health Organization (WHO) define 'health'?",
-   "Complete physical, mental, and social well-being."],
-  ["What is disease? How does it differ from the WHO definition of health?",
-   "An abnormal change in body condition that impairs physical and/or psychological functions."],
-  ["What do morbidity and mortality mean?",
-   "<strong>Morbidity</strong> = illness/sickness. <strong>Mortality</strong> = death.", true],
-  ["What are the 4 main factors that affect human health?",
-   "1. <strong>Diet and nutrition</strong> — food security and quality. 2. <strong>Infectious agents</strong> — viruses, bacteria, parasites, protozoa. 3. <strong>Toxic and hazardous substances</strong> — chemical exposures. 4. <strong>Psychological factors</strong> — stress, mental health, trauma."],
-  ["What is considered the BEST single indicator of a population's overall health?",
-   "Reduction in infant and childhood mortality rates."],
-  ["How has the global disease burden shifted over the past century?",
-   "From <strong>communicable (infectious) diseases</strong> historically dominating, to <strong>non-communicable chronic diseases</strong> today — type 2 diabetes, depression, heart disease, stroke, and cancer. This shift reflects aging populations, lifestyle changes, and success in controlling infectious diseases."],
-  ["What is the #1 cause of preventable death worldwide?",
-   "<strong>Tobacco use</strong> — primarily causing lung disease. It is the leading cause of preventable death globally, killing millions annually through cancer, COPD, and cardiovascular disease."],
-  ["What is the impact of pollution on health in developing countries?",
-   "Pollution is the <strong>leading cause of death and disability</strong> in developing countries — responsible for approximately <strong>7 million deaths per year</strong>. <strong>9 out of 10 people</strong> worldwide breathe air that exceeds WHO pollution standards."],
-  ["What are the 4 main types of infectious agents that cause disease in humans?",
-   "1. <strong>Viruses</strong> (e.g., influenza, HIV, COVID-19). 2. <strong>Bacteria</strong> (e.g., tuberculosis, cholera). 3. <strong>Parasitic worm infections</strong> (e.g., tapeworms, roundworms — major burden in tropical regions). 4. <strong>Protozoan diseases</strong> (e.g., malaria caused by <em>Plasmodium</em>, sleeping sickness)."],
-  ["Which 3 animals are the primary hosts involved in influenza recombination?",
-   "<strong>Humans, swine (pigs), and birds</strong>. Pigs are especially important because their cells have receptors for both bird and human flu strains, making them a 'mixing vessel' where genetic reassortment can create new pandemic strains."],
-  ["What is the difference between an emergent and a reemergent disease?",
-   "<strong>Emergent disease</strong>: a disease not previously known to exist in humans (e.g., COVID-19, HIV when first discovered). <strong>Reemergent disease</strong>: either a new variation of an old disease, OR a disease once controlled that is now coming back (e.g., measles outbreaks after vaccine hesitancy, new COVID variants)."],
-  ["What is a zoonotic disease? Give 4 examples.",
-   "A disease transmitted from non-human animals to humans. Examples: rabies, malaria, influenza, and COVID-19."],
-  ["Why has the rate of zoonotic disease emergence increased in recent decades?",
-   "Because humans are increasingly <strong>encroaching on and destroying wildlife habitats</strong> — deforestation, agricultural expansion, wildlife trade — forcing contact between humans and animal reservoirs that previously had little interaction with us. More contact = more opportunities for animal pathogens to jump to humans."],
-  ["What is Conservation Medicine (One Health)? Why was it created?",
-   "An emerging discipline that studies how <strong>environmental changes threaten the health of humans, animals, AND ecosystems simultaneously</strong>. It recognizes that human health, animal health, and environmental health are inseparable. Created because traditional medicine treated each in isolation, missing the connections — e.g., habitat destruction → zoonotic spillover → human pandemic."],
-  ["What is antibiotic resistance?",
-   "When bacteria <strong>become resistant — able to survive and reproduce</strong> despite antibiotic treatment. It occurs through natural selection: bacteria with genetic mutations that reduce antibiotic effectiveness survive, reproduce, and pass on resistance genes. Antibiotic resistance is considered <strong>~99.999% human-caused</strong>."],
-  ["What is the PRIMARY cause of antibiotic resistance globally?",
-   "Overuse of antibiotics in livestock agriculture."],
-  ["How does natural selection explain the spread of antibiotic resistance?",
-   "When antibiotics are used repeatedly, most bacteria die — but any bacterium with a resistance mutation <strong>survives and reproduces</strong>. Its offspring inherit the resistance gene. Over generations, resistant strains come to dominate the population. Overuse accelerates this process by giving resistant bacteria a constant competitive advantage over non-resistant ones."],
+  // ── Soil & Sustainable Farming — Oct 23 lecture (0–22) ──
+  ["Is soil renewable? Why is it still unsustainable?",
+   "Yes, soil is <strong>renewable</strong>: topsoil builds up about <strong>1 mm per year</strong>. But commercial farming (plowing, harvesting) can erode about <strong>25 mm per year</strong>, so soil is lost far faster than it forms — <strong>highly unsustainable</strong>."],
+  ["What are the 6 components of soil?",
+   "1. <strong>Sand and gravel</strong> (mineral particles). 2. <strong>Silts and clays</strong> (very small mineral particles; clay holds water well). 3. <strong>Organic matter</strong> (decaying plants; gives soil its dark color). 4. <strong>Soil biota</strong> (bacteria, worms, fungi, roots, insects). 5. <strong>Water</strong>. 6. <strong>Air</strong>."],
+  ["What is loam?",
+   "The best soil for farming — a good mix of <strong>sand, silt and clay</strong> (soil texture)."],
+  ["Which soil organisms increase fertility, and how?",
+   "<strong>Microorganisms</strong> (bacteria, algae, fungi) decompose and recycle organic debris. <strong>Nematodes</strong> process organic matter and make air spaces. <strong>Arthropods and earthworms</strong> aerate and loosen the soil."],
+  ["What is mycorrhizal symbiosis?",
+   "A relationship between <strong>fungi and plant roots</strong>. The fungi provide <strong>nutrients and water</strong> to the plant."],
+  ["What 4 things reduce soil fertility?",
+   "<strong>Salinity</strong> (salt), <strong>compaction</strong>, <strong>waterlogging</strong>, and <strong>wind and water erosion</strong> (the biggest)."],
+  ["What is desertification, and where is it a big concern?",
+   "When erosion turns <strong>productive land into unproductive land</strong>. It leads to food insecurity, famine and poverty. Big concern in <strong>sub-Saharan Africa</strong> and <strong>northern and western China</strong>."],
+  ["How do poverty and population growth cause desertification?",
+   "People strip land of <strong>trees and cover for food and firewood</strong>, or <strong>overgraze</strong> (China). That exposes soil to erosion, contributes to climate change and spreads desertification."],
+  ["How much water is used for irrigation, and how much is lost in canals?",
+   "About <strong>2/3</strong> of water taken from rivers and groundwater is used for irrigation. About <strong>80%</strong> of it <strong>evaporates</strong> from canals before reaching the fields — only ~20% gets there."],
+  ["What is flood irrigation, and what are its problems?",
+   "Flooding fields with water — common in the <strong>Midwest</strong> because water is cheap. Much is <strong>lost to evaporation</strong> in the summer sun. Over-irrigation causes <strong>waterlogging and salination</strong>."],
+  ["Which 3 soil nutrients are most often depleted?",
+   "<strong>Nitrogen, potassium and phosphorus.</strong> Farmers replace them with commercial fertilizer (nitrogen fertilizer, ammonia, is made from <strong>natural gas</strong>)."],
+  ["What are natural alternatives to commercial fertilizer?",
+   "<strong>Livestock manure</strong> with good soil management; <strong>legumes</strong> (beans, lentils) whose bacteria make nitrogen available; and <strong>interplanting or rotating</strong> beans with nitrogen-hungry crops like corn and wheat."],
+  ["What is blue baby syndrome (cyanosis)?",
+   "Infant illness/death from <strong>nitrate-contaminated water</strong> (from excess fertilizer), often mixed into baby formula. Nitrates interfere with <strong>hemoglobin</strong> so oxygen isn't delivered to tissues — the baby turns blue."],
+  ["What is eutrophication?",
+   "Excess fertilizer enters water → <strong>algae overgrowth</strong> → algae <strong>decays</strong> → <strong>oxygen depleted</strong> → aquatic life dies."],
+  ["Where is the biggest dead zone in the world, and what causes it?",
+   "The <strong>Gulf of Mexico</strong> (~57,000 km² / 22,000 sq mi). Spring rains wash excess farm nutrients from Iowa, Illinois, Missouri and other farm states down the <strong>Mississippi River</strong>."],
+  ["Name 6 ways farmers can reduce erosion.",
+   "1. <strong>Contour plowing</strong>. 2. <strong>Strip farming</strong>. 3. <strong>Terracing</strong>. 4. <strong>Perennial cover</strong> (grasses, orchards, tea, coffee). 5. <strong>Cover crops</strong>. 6. <strong>Conservation tillage</strong>."],
+  ["What are strip farming and terracing?",
+   "<strong>Strip farming</strong> = alternating crops along the contours to make ridges that slow water so it soaks in. <strong>Terracing</strong> = shelves cut into hillsides to hold water and soil; good in mountains but expensive."],
+  ["What are cover crops and conservation tillage?",
+   "<strong>Cover crops</strong> (alfalfa, rye, clover) are plowed under at planting time; they fix nitrogen and protect soil. <strong>Conservation tillage</strong> = <strong>less plowing</strong>, leaving crop debris or stalks to cut wind and water erosion."],
+  ["What do the USDA organic labels mean?",
+   "<strong>100% organic</strong> = no hormones, antibiotics, pesticides, synthetic fertilizers or genetic modification. <strong>Organic</strong> = at least <strong>95%</strong> organic ingredients. <strong>Made with organic ingredients</strong> = at least <strong>70%</strong>."],
+  ["What are the 3 organic/sustainable pest management mechanisms?",
+   "1. <strong>Crop management</strong>. 2. <strong>Biological controls</strong>. 3. <strong>Integrated pest management (IPM)</strong>."],
+  ["Give 4 crop management methods for pests.",
+   "<strong>Crop rotation</strong> (2–6 year cycles; pests are crop-specific), <strong>flooding or burning</strong> fields, <strong>planting breaks</strong> (tree lines, hedges) for predators, and <strong>polyculture</strong> instead of monoculture."],
+  ["What are biological controls? Give examples.",
+   "Using living things to control pests: <strong>predators</strong> (wasps, ladybugs, praying mantis, chickens, ducks, geese) and <strong>pathogens</strong> like <strong><em>Bacillus thuringiensis</em></strong>, a bacterium that kills caterpillar larvae but is harmless to humans."],
+  ["What is integrated pest management (IPM), and what is a trap crop?",
+   "<strong>IPM</strong> = an ecologically based, preventive approach that uses chemicals <strong>only as a last resort</strong>. A <strong>trap crop</strong> is a small plot planted early to lure pests; it's sprayed and destroyed, leaving the main field mostly pest- and pesticide-free."],
 
+  // ── Coal & Oil Impacts — Oct 21 lecture (0–15) ──
+  ["What pollutants are released when coal is burned?",
+   "<strong>Radioactive and toxic metals</strong> (uranium, thorium, mercury, lead), <strong>sulfur oxides</strong>, <strong>nitrogen oxides</strong>, <strong>particulates</strong>, and lots of <strong>carbon dioxide</strong>.", true],
+  ["Coal combustion is responsible for what share of atmospheric mercury pollution in the US?",
+   "<strong>25%</strong> of all atmospheric mercury pollution in the US.", true],
+  ["What are particulates, and why are they dangerous?",
+   "Very <strong>small particles</strong> (like ash) released when coal burns. They can get <strong>deep into our lungs</strong>.", true],
+  ["Why does it matter that burning coal releases sulfur oxides, nitrogen oxides, particulates and CO₂?",
+   "Together they contribute to <strong>acid rain</strong>, <strong>air pollution</strong> and <strong>global warming</strong>.", true],
+  ["Describe the pH scale.",
+   "Runs <strong>0 to 14</strong>. <strong>7 = neutral</strong>. Below 7 = <strong>acidic</strong> (the lower, the more acidic). Above 7 = <strong>alkaline / basic</strong>. Examples: stomach acid ~2, soda ~4–5, blood ~7.5, Drano = strong base.", true],
+  ["How does acid rain form, and what damage does it do?",
+   "Normal rain is <strong>near neutral</strong>. Pollutants from burning fossil fuels mix with water in the air and <strong>lower the pH</strong> of rain. Acid rain <strong>kills forests</strong> (trees take it up through their roots) and <strong>eats away limestone</strong> statues and buildings."],
+  ["Why is oil considered non-renewable?",
+   "It is a <strong>fossil fuel</strong> that takes <strong>hundreds of millions of years</strong> to form, so it can't be replaced in our lifetime. Once it's gone, it's gone.", true],
+  ["What is an oil pool?",
+   "Oil held in the spaces of <strong>porous rock / sandstone</strong>, as individual droplets or a thin film — <strong>like water in a sponge</strong>. It is pumped out. Oil pools are the <strong>most useful</strong> and easiest oil deposits.", true],
+  ["What are the 3 ways to extract oil covered in class?",
+   "1. <strong>Oil pools</strong> (most useful). 2. <strong>Hydraulic fracturing (fracking)</strong>. 3. <strong>Deep ocean wells</strong>.", true],
+  ["What is hydraulic fracturing (fracking)?",
+   "A <strong>secondary recovery</strong> method for <strong>oil or natural gas</strong>. Wells that have gone \"dry\" are <strong>flooded with water</strong> to flush out the leftover oil or gas. It releases oil and gas from <strong>\"tight\" formations</strong> where flow would otherwise be blocked.", true],
+  ["What are the main problems with fracking?",
+   "It uses <strong>fresh, drinkable (potable) water</strong> — a limited resource — and makes it <strong>unusable</strong> for any other purpose. If well barriers fail, it can <strong>contaminate a town's groundwater</strong> (even tap water with enough natural gas to catch fire).", true],
+  ["Why is fresh water only \"partly\" renewable?",
+   "Only about <strong>3%</strong> of Earth's water is fresh, and <strong>less than 1%</strong> is easy to reach (much is locked in glaciers). Once contaminated, it can't be used for drinking. Desalinating ocean water is very expensive."],
+  ["What are deep ocean wells, and what is their main risk?",
+   "Oil wells drilled <strong>far out and deep in the ocean</strong>, often where tectonic plates meet. They yield a lot of oil but are <strong>very hard to contain</strong> if something fails."],
+  ["What was the Deepwater Horizon disaster?",
+   "A <strong>2010</strong> blowout and explosion of a deep ocean oil well in the <strong>Gulf of Mexico</strong>. It killed <strong>11 workers</strong>, released about <strong>134 million gallons</strong> of crude oil, took <strong>87 days</strong> to plug, and wrecked the fishing and tourism industries."],
+  ["What are the negative impacts of oil?",
+   "<strong>Disrupts wildlife and plants</strong>; burning it produces <strong>carbon dioxide and nitrogen oxides</strong>; about <strong>1.5 billion tons</strong> of oil are shipped every year by <strong>ocean tankers or pipelines</strong>, which risks spills (e.g., the <strong>Exxon Valdez</strong> tanker that ran aground in Alaska).", true],
+  ["What are tar sands, and why are tar sands pipelines risky?",
+   "<strong>Oil mixed with sand</strong> — a sludge that needs high pressure to push through pipelines. Tar sands pipelines have a <strong>much higher rupture rate</strong> than conventional oil pipelines. Proposed routes cross the underground aquifer that supplies the Midwest's drinking and farm water.", true],
 
-  // ── Ch. 7: Demographic Transitions, Life Expectancy & Age Histograms ──
-  ["What are the 4 stages of demographic transition?",
-   "Stage 1 (Pre-modern): High birth rates + high death rates. Stage 2 (Economic development begins): Death rates fall, birth rates still high. Stage 3: Birth rates begin to fall as people realize children will survive infancy. Stage 4 (Developed countries): Low birth + low death rates = population equilibrium."],
-  ["Why do birth rates stay HIGH in Stage 2 of demographic transition even as death rates fall?",
-   "People haven't yet changed their cultural expectation that many children will die in infancy. Birth rates remain high until societies reach Stage 3, when confidence that children will survive finally leads families to have fewer children."],
-  ["What 4 conditions must occur for a society to move through a demographic transition?",
-   "1. Better standard of living (healthcare, employment, education — especially for women). 2. Confidence that children will survive infancy → families choose to have fewer children. 3. Improved status for women. 4. Availability and education on birth control."],
-  ["What is the difference between lifespan and life expectancy?",
-   "Lifespan = the OLDEST age members of a species can survive (e.g., humans ~120 years; bristlecone pine ~4,000 years). Life expectancy = the AVERAGE age a newborn can expect to attain in a given society. Worldwide average rose from ~30 to over ~72 years.", true],
-  ["What is the PRIMARY cause of increasing life expectancy, and what 3 factors drive it?",
-   "Primary cause: declining mortality. The 3 key drivers are nutrition, sanitation, and education."],
-  ["How does a country's Gross National Product (GNP) relate to life expectancy, and what is the limit?",
-   "Positive correlation: wealthier nations have higher life expectancy (South Africa ~50 yrs, Russia ~65, Hungary ~70s, New Zealand/Canada ~80). BUT only up to a point — beyond a certain wealth level, more money does NOT continue to raise life expectancy."],
-  ["What does a PYRAMID-shaped age class histogram (wide base, narrow top) indicate? (EXAM)",
-   "A rapidly growing population."],
-  ["What does a COLUMN-shaped age class histogram indicate? (EXAM)",
-   "A stable population."],
-  ["What does an age class histogram with a BULGE IN THE CENTER indicate? (EXAM)",
-   "A declining population."],
-  ["What is population momentum?",
-   "When a population continues to grow even if fertility rates drop, because a large number of individuals are currently in or about to enter their reproductive years. A large young cohort guarantees continued births regardless of current rate changes."],
-  ["What is the dependency ratio, and why is it a problem in the US?",
-   "The ratio of NON-WORKING individuals (under age 15 + over age 65) to WORKING individuals. Problem in US: declining birth rates = fewer young workers → less money contributed to Social Security, while more elderly draw from it → Social Security funding gap.", true],
-  ["What are pronatalist pressures? Give at least 5 examples.",
-   "Factors that INCREASE desire for children: 1. Source of pleasure, pride, comfort. 2. Religious ideology. 3. Support for elderly parents (children as caretakers in multigenerational households). 4. Additional labor/income (e.g., farm labor). 5. Social status (more children = higher status in some cultures). 6. Replacing members of society."],
+  // ── Conventional Energy & Coal — Oct 19 lecture (16–33) ──
+  ["What are the 3 conventional energy sources (fossil fuels)?",
+   "<strong>Coal, oil and natural gas.</strong>", true],
+  ["What is a fossil fuel?",
+   "A <strong>non-renewable</strong> energy source made from the <strong>buried, decomposing remains of ancient plants and animals</strong> that lived millions of years ago.", true],
+  ["What percentage of the world's commercial energy needs is supplied by fossil fuels?",
+   "<strong>88%</strong>.", true],
+  ["What share of fossil fuels do rich (developed) countries consume, and what share of the world's population do they have?",
+   "They consume about <strong>80%</strong> of fossil fuels while having only <strong>20%</strong> of the world's population (e.g., the US and Europe).", true],
+  ["What will growing populations like China and India do to fossil fuel demand?",
+   "<strong>Further increase</strong> demand. By about 2035, China and India are predicted to use about <strong>60%</strong> of the world's energy.", true],
+  ["What do Norway, Denmark and Japan show us about energy use?",
+   "They use about <strong>half</strong> as much energy as the US with an equal or <strong>higher standard of living</strong> — so more energy use does not mean a better life, and we could conserve a lot."],
+  ["In the US, which two sectors use the largest share of energy?",
+   "<strong>Transportation and industry.</strong>", true],
+  ["How much transportation energy is used by motor vehicles, and where does it come from?",
+   "About <strong>3/4 (75%)</strong> is used by motor vehicles, and almost all of it comes from <strong>petroleum</strong>.", true],
+  ["What does \"industrial use\" of energy mean, and how much energy does it use?",
+   "<strong>Mining, milling (making things) and processing of minerals.</strong> About <strong>1/4 (25%)</strong> of energy.", true],
+  ["How big are world coal deposits compared to oil and gas?",
+   "World coal deposits are about <strong>10 times greater</strong> than conventional oil and gas resources <strong>combined</strong>. Coal is widespread and extensive.", true],
+  ["What are proven reserves?",
+   "Reserves that have been <strong>mapped and measured by geologists</strong> and shown to be <strong>economically recoverable</strong> (can be extracted at a profit).", true],
+  ["Where are the world's proven coal reserves?",
+   "<strong>Europe/Eurasia ~31%</strong>, <strong>North America ~30%</strong>, <strong>Central & South America ~18%</strong>. Counting unknown reserves, coal could last <strong>thousands of years</strong>."],
+  ["What are the disadvantages of coal?",
+   "It is <strong>dirty</strong> to burn and <strong>dangerous</strong> to mine.", true],
+  ["How dangerous has coal mining been in the US?",
+   "Between <strong>1870 and 1950</strong>, more than <strong>30,000</strong> American coal miners died from accidents and injuries in <strong>Pennsylvania alone</strong>. Thousands more died from respiratory diseases.", true],
+  ["What is black lung disease?",
+   "A respiratory disease of coal miners caused by <strong>inhaling coal dust</strong>. The lungs become inflamed and stiff (<strong>fibrosis</strong>) and can't exchange oxygen and CO₂ properly.", true],
+  ["What radioactive elements do coal-burning plants emit?",
+   "<strong>Uranium and thorium.</strong> The radioactivity travels through the air and ends up in water and soil.", true],
+  ["Compare underground mining and strip mining.",
+   "<strong>Strip mining</strong> is <strong>cheaper and safer</strong> for workers than underground mining, but it is far more <strong>destructive to ecosystems</strong>.", true],
+  ["What are the environmental effects of strip mining / mountaintop removal?",
+   "Makes land <strong>unfit for other uses</strong>; <strong>acid drainage damages streams</strong>; mountaintop removal (practiced in <strong>Appalachia</strong>) buries streams, farms and even whole towns under <strong>tons of toxic rubble</strong>.", true],
 
-  // ── Ch. 7: Human Populations (32–47) ──
-  ["How did Karl Marx's view of population growth differ from Thomas Malthus's?",
-   "Malthus said population growth is the CAUSE of poverty and resource depletion. Marx said population growth is a SYMPTOM of poverty and resource depletion — the result of poor conditions, not the cause. Malthus blamed people; Marx blamed the economic system.", true],
-  ["What economic arguments suggest that MORE people can be beneficial?",
-   "More people = larger markets, more workers, and increased efficiency through mass production. It also means potentially more intelligence, innovation, and enterprise to solve problems."],
-  ["Where in the world have fertility rates NOT declined significantly?",
-   "Fertility rates have declined everywhere EXCEPT in some countries of sub-Saharan Africa, where rates remain high due to factors like lower development levels, limited access to education and healthcare, and social/cultural factors."],
+  // ── Food & Hunger — Oct 16 lecture (34–51) ──
+  ["Is world hunger mainly caused by a global lack of calories?",
+   "<strong>No.</strong> Food production has kept up with population. Hunger is mostly about <strong>unequal access</strong> to healthy food."],
+  ["What does it mean to be chronically undernourished, and how many people are?",
+   "Getting <strong>fewer than 2,200 calories per day</strong>. About <strong>800 million</strong> people worldwide."],
+  ["What is food security?",
+   "A person's <strong>ability to obtain sufficient, nutritious food</strong> on a day-to-day basis."],
+  ["What are 5 causes of famine?",
+   "1. <strong>Natural disasters</strong> (droughts, floods). 2. <strong>Violent conflict</strong> (drives farmers off land). 3. <strong>Political corruption</strong>. 4. <strong>Aid policies</strong> that dump surplus grain instead of building local food systems. 5. <strong>Climate change</strong>."],
+  ["What are the 6 essential nutrients?",
+   "<strong>Proteins, carbohydrates, lipids, minerals, vitamins and water.</strong> The body can't make them (or not enough of them)."],
+  ["What do lipids (fats) do in the body?",
+   "Build <strong>cell membranes</strong> (phospholipids), make <strong>hormones</strong> (testosterone, estrogen, progesterone), and let the body absorb the fat-soluble vitamins <strong>A, D, E and K</strong>."],
+  ["What is the difference between kwashiorkor and marasmus?",
+   "<strong>Kwashiorkor</strong> = protein deficiency. <strong>Marasmus</strong> = protein <strong>plus calorie</strong> deficiency. Both lower resistance to infection and delay mental and physical development."],
+  ["What is anemia, and who does it affect most?",
+   "<strong>Iron deficiency</strong> (iron is needed for hemoglobin to carry oxygen). It is the <strong>most common nutritional problem in the world</strong>, mostly affecting <strong>women and children</strong>."],
+  ["Why is iodine important, and how was its deficiency solved?",
+   "Iodine regulates <strong>metabolism and brain development</strong>; lack of it stunts growth. Adding it to salt (<strong>iodized salt</strong>) nearly eliminated the problem in developed countries."],
+  ["What 3 crops does humanity depend on most?",
+   "<strong>Wheat, rice and maize (corn)</strong> — about 2.5 billion metric tons a year. Only wheat is mostly eaten directly."],
+  ["How many kg of grain does it take to make 1 kg of beef, pork, fish and bread?",
+   "<strong>Beef 8</strong>, <strong>pork 3</strong>, <strong>fish 1.5</strong>, <strong>bread 1</strong>. Example: 96 kg of beef × 8 = <strong>768 kg</strong> of grain."],
+  ["Why is eating meat less efficient than eating grain directly?",
+   "Only about <strong>10%</strong> of energy passes up each trophic level. We could feed about <strong>8×</strong> more people eating grain directly, and beef takes about <strong>16×</strong> the fossil fuel energy of vegetables or rice."],
+  ["What share of global fisheries are overfished or depleted?",
+   "About <strong>90%</strong>. <strong>Overfishing</strong> = catching so many fish that the breeding population can't recover."],
+  ["What is aquaculture?",
+   "Raising aquatic species in <strong>net pens, tanks or ponds</strong> (e.g., salmon, sea bass, tuna, tilapia)."],
+  ["What are the problems with marine aquaculture?",
+   "Carnivorous fish are fed <strong>wild-caught fish</strong>; <strong>overcrowding spreads disease</strong>; feces, uneaten food and <strong>antibiotics</strong> flow into the surrounding ocean."],
+  ["What was the Green Revolution, and what are high responders?",
+   "The big rise in food production from new farming techniques. <strong>High responders</strong> are crops that yield more and resist drought, frost, salty soil or pests — but <strong>only with lots of water, fertilizer and pest control</strong>, which hurts poor farmers."],
+  ["What is the difference between a GMO and CRISPR-Cas9?",
+   "A <strong>GMO</strong> moves genes <strong>from one organism into a different organism</strong>. <strong>CRISPR-Cas9</strong> edits the <strong>organism's own DNA</strong> without transferring genes."],
+  ["What is persistence?",
+   "How long a substance can <strong>linger in the environment</strong> without breaking down."],
 
-  ["What was the estimated world population in 2024, and what is it forecasted to reach by 2050?",
-   "8.1 billion in 2024; forecasted to grow to about 10 billion by 2050."],
-  ["What is the overall trend in human population growth over the last decade?",
-   "Population growth has slowed. In the 1960s populations were doubling rapidly; now growth rates are declining due to expanded opportunities, better healthcare, and reduced family sizes."],
-  ["Why does expanding education and opportunities for women slow population growth?",
-   "Women with access to education and career advancement tend to delay childbirth, have fewer children, and make more informed family planning choices. This directly reduces birth rates."],
-  ["What are the Millennium Development Goals (MDG)?",
-   "A set of global goals that ran from 2000–2015, set up by government agencies. The overarching goal was to track the progress for ending poverty and making life better for all people."],
-  ["What were three key achievements of the Millennium Development Goals (MDG)?",
-   "1. Child mortality (under age 5) declined by more than half worldwide. 2. Universal primary education achieved by 91% worldwide. 3. The literacy gap between men and women was narrowed."],
-  ["How does narrowing the literacy gap between men and women affect population growth?",
-   "When more people can read, they earn better incomes and make more informed choices about healthcare and family planning — including spacing out children — which reduces birth rates."],
-  ["What is demographics?",
-   "The study of population characteristics such as birth rates, death rates, age distributions, gender distributions, and total population size. Example: the U.S. Census Bureau tracks demographics for every county."],
-  ["What held human population growth in check before modern times?",
-   "Disease, famine, abstinence, and war. Until agriculture (~10,000 years ago) the human population was estimated at only a few million people — transient hunter-gatherers with high mortality rates."],
-  ["When did human populations begin to increase rapidly, and what drove it?",
-   "After about 1600, due to agricultural developments."],
-  ["How did modern healthcare decrease population growth — and why is that a paradox?",
-   "Modern healthcare reduced infant mortality (vaccines, antibiotics, better surgery). Paradox: when parents know most of their children will survive, they tend to have fewer births. So LOWER infant mortality → SMALLER family sizes → SLOWER population growth."],
-  ["What were Thomas Malthus's key ideas about population growth?",
-   "1. Human populations increase exponentially. 2. Growth only slows through disease, famine, late marriage, celibacy, or abstinence. 3. Population growth causes resource depletion and poverty.", true],
-  ["What are the three reproductive life stages used to forecast future population growth?",
-   "Pre-reproductive, reproductive, and post-reproductive."],
-
-  // ── Island Biogeography & Conservation Genetics (48–59) ──
-  ["Who proposed the theory of island biogeography, and what does it predict?",
-   "MacArthur and Wilson. It predicts that the number of species on an island depends on the balance between colonization rates and extinction rates.", true],
-  ["How do island size and distance from the mainland affect species diversity? (all 4 combos)",
-   "Large + Near = most species, lowest extinction. Large + Far = moderate. Small + Near = moderate. Small + Far = fewest species, highest extinction. Nearness = more gene flow; size = more resources.", true],
-  ["Island biogeography applies to more than just islands — what else?",
-   "Isolated patches of forest and isolated wetlands show the same patterns. Highways, urban development, and habitat fragmentation create 'islands' of habitat — reducing gene flow just like ocean distance does."],
-  ["Why is a large population important for genetic diversity?",
-   "More individuals = more genes in the gene pool. Individuals can continue to breed with each other and keep that diversity going. Small populations lose genes every time a member dies, shrinking the gene pool."],
-  ["Define genetic drift. Why does genetic diversity matter for survival?",
-   "Gradual change in gene frequencies in a population due to random events. Genetic diversity matters because if environmental conditions shift, individuals with suitable traits survive — the bigger the gene pool, the better the odds.", true],
-  ["What is founder's effect?",
-   "Occurs when a small group of individuals breaks off and starts a new population in a new area. The new population has much less genetic diversity than the original. Example: Amish/Mennonite colonies, animals colonizing a new island.", true],
-  ["What is a demographic bottleneck? Give an example.",
-   "A catastrophic event (disaster, disease) dramatically reduces a population to very few survivors. Example: cheetahs — an unknown past catastrophe left male cheetahs ~99% genetically identical, causing severe fertility problems today.", true],
-  ["What is the shared outcome of founder's effect AND demographic bottlenecks?",
-   "Both result in interbreeding due to small population sizes → increased expression of recessive genes that may have harmful (deleterious) effects on the population. Less diversity = more disease, fertility problems, etc.", true],
-  ["What is minimum viable population (MVP)?",
-   "The smallest population size that gives a species a reasonable chance for long-term survival.", true],
-  ["What is a metapopulation?",
-   "Populations that are geographically separated but have regular or occasional gene flow between them.", true],
-  ["What is the difference between source and sink habitats in a metapopulation?",
-   "Source habitat: higher birth rates, lower death rates → generates surplus individuals that emigrate OUT to other populations. Sink habitat: lower birth rates, would disappear without immigration from source populations. Movement between them maintains genetic diversity.", true],
-
-  // ── From handwritten notes (60–64) ──
-  ["What is the difference between intrinsic and extrinsic factors that regulate population growth?",
-   "Intrinsic factors: operate WITHIN or BETWEEN individual organisms of the SAME species (e.g., competition for mates, stress from crowding). Extrinsic factors: imposed from OUTSIDE the population (e.g., predators, weather, disease from other species)."],
-  ["What is the difference between biotic and abiotic factors — and how do they connect to density?",
-   "Biotic factors: caused by LIVING organisms — tend to be DENSITY-DEPENDENT (their effect intensifies as population grows). Abiotic factors: caused by NON-LIVING environmental components — tend to be DENSITY-INDEPENDENT (affect population regardless of size). Examples of biotic: predation, disease. Examples of abiotic: drought, fire, natural disasters."],
-  ["What are intraspecific interactions?",
-   "Competition for resources by individuals WITHIN the same population (same species). As population density increases, individuals compete more intensely for limited food, water, space, and mates."],
-  ["What happens to resources as a population's density approaches carrying capacity (K)?",
-   "One or more resources become limiting."],
-  ["What is Population Viability Analysis (PVA)?",
-   "A conservation biology tool that models whether a population of a given size can survive long-term."],
-
-  // ── Original Ch. 6 Population Biology cards (65–107) ──
-  ["What does a J-curve represent?",
-   "Exponential growth — population doubles with each generation. Shoots steeply upward with no limit.", true],
-  ["What does an S-curve (sigmoidal/logistic curve) represent?",
-   "Logistic growth — population growth slows as it approaches carrying capacity and stabilizes in an S-shape.", true],
-  ["J-shaped, S-shaped, logistic, and sigmoidal all refer to what?",
-   "The same two growth patterns: J = exponential (no limit), S = logistic (slows near K). All four terms = one of those two things."],
-  ["List the 5 conditions that allow exponential growth.",
-   "1. Abundant resources (food, water, space) 2. Absence of predators/parasites 3. No disease 4. Stable, optimal weather 5. New colonization of an unoccupied habitat"],
-  ["Why does exponential growth always have limits in the real world?",
-   "Eventually food, water, space, disease, or predators become limiting and push the population toward logistic (S-curve) growth."],
-  ["What is the Yellowstone wolves example used to illustrate?",
-   "Logistic growth and predation preventing overshoot. Wolves keep prey populations below carrying capacity and remove old/sick animals, making prey herds healthier."],
-  ["Define carrying capacity (K).",
-   "The maximum population size that an area can support indefinitely without depleting available resources. Shown as a horizontal line on a graph.", true],
-  ["What is overshoot?",
-   "When a population exceeds carrying capacity. Results in deaths due to resource scarcity."],
-  ["What is a population crash (dieback)?",
-   "A rapid drop below carrying capacity that follows an overshoot once resources are exhausted."],
-  ["What is boom and bust?",
-   "Repeated cycles of overshoot and population crash."],
-  ["What happens to carrying capacity after repeated overshoots?",
-   "K may decrease over time because resource damage during overshoot prevents full recovery — the K line trends downward."],
-  ["On a boom-and-bust graph, what does the horizontal line represent?",
-   "Carrying capacity (K) — the sustainable population level for that habitat."],
-  ["What 4 things must you identify on a boom-and-bust graph? (EXAM)",
-   "1. Carrying capacity (horizontal line) 2. Overshoot (population above the line) 3. Population crash/dieback (rapid drop) 4. Boom-and-bust cycle (repeating pattern)"],
-  ["What is a density dependent factor?",
-   "A factor whose impact intensifies as population density increases.", true],
-  ["Give 3 examples of density dependent factors.",
-   "1. Disease (spreads more easily in dense populations) 2. Predation (predators find prey more easily) 3. Physiological stress (crowding causes stress)"],
-  ["What is a density independent factor?",
-   "A factor that affects the population regardless of its size or density. Hits 2 or 200 individuals the same way.", true],
-  ["Give 5 examples of density independent factors.",
-   "1. Drought 2. Fire 3. Earthquakes, hurricanes, natural disasters 4. Pollution (human-caused) 5. Habitat destruction (human-caused)"],
-  ["Disease in a packed classroom vs. a hurricane — which is density dependent and which is density independent?",
-   "Disease in a packed classroom = density dependent (density made it spread more). Hurricane = density independent (doesn't matter how many are there)."],
-  ["What does 'R-selected' mean?",
-   "Species adapted to unstable environments with rapid, exponential (J-curve) growth.", true],
-  ["What does 'K-selected' mean?",
-   "Species that stabilize near carrying capacity (K).", true],
-  ["Give 2 examples of R-selected species.",
-   "Cockroach and dandelion — rapid reproduction, little parental investment, boom-and-bust population patterns."],
-  ["Give 4 examples of K-selected species.",
-   "Humans, elephants, eagles, whales — slow to reproduce, heavy parental investment, populations stabilize near K."],
-  ["Compare R-selected vs K-selected: lifespan, parental care, offspring count, environment.",
-   "R: Short lifespan, little/no parental care, many offspring, unstable environments. K: Long lifespan, high parental care, few offspring, stable environments."],
-  ["Which type — R or K — is typically lower on the trophic level?",
-   "R-selected species are typically lower (prey, plants, insects). K-selected are typically predators at higher trophic levels."],
-  ["What does the 'K' in K-selected and 'R' in R-selected stand for?",
-   "K = carrying capacity (these species stabilize near K). R = intrinsic rate of increase (these species maximize growth rate)."],
-  ["Which growth curve (J or S) goes with R-selected? With K-selected?",
-   "R-selected → J-curve (exponential, boom-and-bust). K-selected → S-curve (logistic, stabilizes near K)."],
-  ["What is island biogeography about?",
-   "How island size and distance from the mainland affect species diversity and genetic diversity on that island."],
-  ["What is genetic drift? Give two examples.",
-   "Random changes in allele frequency in a population. Examples: founder's effect (small group colonizes new area) and bottleneck effect (population dramatically reduced by a disaster)."],
-  ["Why can't exponential growth continue forever?",
-   "Resources (food, water, space) are finite. Eventually limiting factors — disease, predation, competition, starvation — slow growth and push toward logistic growth."],
-  ["How does predation act as a density dependent factor?",
-   "As prey density increases, predators find prey more easily → predation rate goes up → acts as a brake on growth. More prey = more predators = more deaths."],
-  ["Table 6.1 #8 — R-selected are ___; K-selected are ___ (colonization role).",
-   "R-selected = Pioneers, colonizers — first to move into disturbed or new habitats. K-selected = Later stages of succession — move in after the environment is stable."],
-  ["What is the difference between a niche generalist and a niche specialist?",
-   "Niche generalist (R-selected) — survives in a wide range of conditions, flexible. Niche specialist (K-selected) — adapted to one specific stable environment, less flexible but highly efficient."],
-  ["Table 6.1 #10 — R-selected are typically ___; K-selected are typically ___.",
-   "R-selected = Prey (lower trophic level). K-selected = Predators (higher trophic level)."],
-  ["What regulates R-selected populations? What regulates K-selected?",
-   "R-selected = regulated mainly by extrinsic (external) factors — density-independent events like weather, disasters. K-selected = regulated mainly by intrinsic (biological) factors — competition, predation, physiology."],
-  ["What is the difference between extrinsic and intrinsic population regulation?",
-   "Extrinsic = external/outside the organism — weather, disaster, human activity. Typically density-independent. Intrinsic = biological/internal — competition, stress, reproductive rates. Typically density-dependent."],
-  ["List ALL 12 characteristics of R-selected species (Table 6.1).",
-   "1.Short life 2.Rapid growth 3.Early maturity 4.Many small offspring 5.Little parental care 6.Little investment per offspring 7.Unstable environment 8.Pioneers/colonizers 9.Niche generalists 10.Prey 11.Extrinsic regulation 12.Low trophic level"],
-  ["List ALL 12 characteristics of K-selected species (Table 6.1).",
-   "1.Long life 2.Slower growth 3.Late maturity 4.Few large offspring 5.High parental care 6.High investment per offspring 7.Stable environment 8.Later succession 9.Niche specialists 10.Predators 11.Intrinsic regulation 12.High trophic level"],
-  ["What does logistic growth being 'density dependent' mean?",
-   "As the population gets more crowded, disease/predation/stress intensify and slow the growth rate down — that's what creates the S-curve leveling off near K."],
-  ["After a population overshoot, why might K decrease?",
-   "Overuse of resources during overshoot causes habitat damage (soil erosion, stripped vegetation, depleted water). Resources can't fully rebound, so the area supports fewer individuals — K drops."],
-  ["What is ecological succession and how do R and K species fit?",
-   "R-selected pioneer species colonize first (bare/disturbed ground). K-selected species dominate later, stable stages."],
-  ["What are the 4 factors that contribute to the rate of population growth?",
-   "1. Births (natality) — adds individuals 2. Deaths (mortality) — removes individuals 3. Immigration — individuals moving IN 4. Emigration — individuals moving OUT. Population grows when births + immigration > deaths + emigration."],
-  ["Which type of growth curve is density dependent, and which is NOT?",
-   "S-curve (logistic) = density dependent. As density increases, disease/predation/stress intensify and slow growth near K. J-curve (exponential) = NOT density dependent — nothing limits it, so it keeps shooting upward."],
-  ["Why are population dynamics important beyond just population numbers?",
-   "Population dynamics affect environmental quality and biodiversity."],
 ];
 
 function topicLabel(idx) {
-  if (idx < 42) return 'Ch. 8 · Env. Health';
-  if (idx < 54) return 'Ch. 7 · Demographics';
-  if (idx < 69) return 'Ch. 7 · Human Pop.';
-  if (idx < 80) return 'Ch. 6 · Biogeography';
-  if (idx < 85) return 'Ch. 6 · Field Notes';
-  return 'Ch. 6 · Pop. Biology';
+  if (idx < 23) return 'Soil & Farming · Oct 23';
+  if (idx < 39) return 'Coal & Oil · Oct 21';
+  if (idx < 57) return 'Conv. Energy · Oct 19';
+  return 'Food & Hunger · Oct 16';
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -1323,7 +1210,7 @@ function switchMode(mode) {
     t.classList.toggle('active', (i===0)===isFlash);
   });
   document.getElementById('main-sub').textContent =
-    isFlash ? '125 cards · Tap to flip · Space to flip · ← → to mark'
+    isFlash ? '75 cards · Tap to flip · Space to flip · ← → to mark'
             : 'Multiple choice practice test';
 }
 
